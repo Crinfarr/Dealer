@@ -1,0 +1,17 @@
+{
+  "name": "pokerbot",
+  "version": "1.0.0",
+  "description": "plays poker",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "crinfarr",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {
+    "prompt": "^1.1.0"
+  }
+}
