@@ -139,11 +139,10 @@ class deck {
 /**
  * @description creates a {@link deck} of standard poker {@link card} objects
  * @param {deck | String} deck the deck to place the cards in, or a string to return the deck
- * @param {?object} style the card generator, defaults to poker
  */
 exports.makePokerDeck = (deck) => {
-    cards.poker.suits.forEach(suit => {
-        cards.poker.nums.forEach(num => {
+    poker.suits.forEach(suit => {
+        this.poker.nums.forEach(num => {
             switch (suit) {
                 case '♣️':
                     //var s = 'c';
@@ -166,7 +165,7 @@ exports.makePokerDeck = (deck) => {
                     var sn = null;
                     break;
             }
-            var tmpcrd = new cards.card(suit, num, `${num} of ${sn}`);
+            var tmpcrd = new card(suit, num, `${num} of ${sn}`);
             deck.addCards(tmpcrd);
         })
     });
@@ -176,7 +175,7 @@ exports.makePokerDeck = (deck) => {
  * @description the possible suits and numbers in a deck of poker cards
  * @constant poker
  */
-exports.poker = {
+const poker = {
     /**
      * @description the 4 suits of playing card as unicode symbols
      */
@@ -190,3 +189,4 @@ exports.poker = {
 exports.card = card;
 exports.deck = deck;
 exports.preset = preset;
+exports.poker = poker;
